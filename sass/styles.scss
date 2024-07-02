@@ -1,0 +1,636 @@
+$font-family: "Livvic", sans-serif;
+$font-color: #ffffff;
+
+body {
+  margin: 0;
+  font-family: $font-family;
+  background-color: #004a57;
+  color: $font-color;
+  overflow-x: hidden; // Prevent horizontal scroll
+}
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 20px;
+  width: 100%; // Make container width flexible
+  box-sizing: border-box;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; // Allow items to wrap on small screens
+
+  .logo h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap; // Allow items to wrap on small screens
+
+    li a {
+      color: $font-color;
+      text-decoration: none;
+      font-size: 18px;
+    }
+  }
+
+  .contact a {
+    padding: 10px 20px;
+    border: 2px solid $font-color;
+    text-decoration: none;
+    color: $font-color;
+    border-radius: 25px;
+    font-size: 18px;
+  }
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column; // Stack items on small screens
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 250px;
+  flex-wrap: wrap; // Allow items to wrap on small screens
+
+  .main-left {
+    display: flex;
+    flex-direction: column; // Stack image and text on small screens
+    align-items: flex-start;
+    margin-bottom: 20px; // Add margin for spacing on small screens
+    max-width: 100%; // Make full width on small screens
+
+    .decorative-image {
+      max-width: 100%; // Limit the maximum size of the image
+      height: auto; // Maintain aspect ratio
+      margin-left: -20px;
+      margin-bottom: 20px; // Add margin for spacing
+    }
+
+    h2 {
+      font-weight: 700;
+      font-size: 6vw; // Make font size responsive
+      line-height: 1.1;
+      margin: 0;
+      span {
+        color: #ff6464;
+      }
+    }
+  }
+
+  .main-right {
+    max-width: 100%; // Make sure it doesn't exceed the container width
+
+    .small-line {
+      width: 50px;
+      height: 4px;
+      background-color: $font-color;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    .decorative-image-below {
+      max-width: 100%; // Adjust as needed
+      height: auto; // Maintain aspect ratio
+      margin-top: 60vh; // Add margin for spacing
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .main-content {
+    flex-direction: row; // Arrange items side by side on larger screens
+    align-items: flex-start;
+
+    .main-left {
+      flex-direction: row; // Arrange image and text side by side on larger screens
+      align-items: center;
+      width: auto; // Revert to auto width
+
+      .decorative-image {
+        margin-right: 20px;
+        margin-bottom: 0; // Remove margin on larger screens
+      }
+
+      h2 {
+        font-size: 4vw; // Adjust font size for larger screens
+      }
+    }
+
+    .main-right {
+      max-width: 400px; // Limit the width of the right section on larger screens
+
+      .decorative-image-below {
+        margin-bottom: -23px; // Ensure margin for spacing
+      }
+    }
+  }
+}
+
+// section 2 start
+
+$font-stack: "Livvic", sans-serif;
+$primary-color: #053b40;
+$secondary-color: #ffffff;
+$section-two-color: #ff4b4b;
+
+.page-wrapper {
+  margin: 0;
+  font-family: $font-stack;
+  background-color: $primary-color;
+  color: $secondary-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.distributed-teams-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.distributed-teams-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.distributed-teams-features {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.distributed-teams-feature {
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+.distributed-teams-feature img {
+  margin-right: 1rem;
+}
+// .right-down-images-dv{
+//     position: relative;
+//     right: -75vh;
+// }
+
+h2 {
+  color: $section-two-color;
+  font-size: 1.25rem;
+  margin: 0 0 0.5rem;
+}
+
+p {
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .distributed-teams-features {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .distributed-teams-feature {
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .distributed-teams-feature img {
+    margin-bottom: 0.5rem;
+  }
+}
+// done
+
+.section-three-father {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.all-father {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+.section-three-text-one {
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.section-three-text-one h1 {
+  font-family: Livvic;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  max-width: 100%;
+  padding: 0 10px;
+}
+
+.sc-three-page-two {
+  display: flex;
+  flex: 1 1 300px;
+  max-width: 100%;
+}
+
+.in-one-pg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.text-p-one {
+  font-family: Livvic;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+  max-width: 350px;
+  margin: 0 auto 10px;
+}
+
+.two-text-in-one h2 {
+  font-family: Livvic;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 10px 0 5px;
+}
+
+.two-text-in-one p {
+  font-family: Livvic;
+  font-size: 1rem;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .all-father {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .section-three-text-one h1 {
+    font-size: 2rem;
+  }
+
+  .text-p-one {
+    font-size: 0.875rem;
+  }
+
+  .two-text-in-one h2 {
+    font-size: 1rem;
+  }
+
+  .two-text-in-one p {
+    font-size: 0.875rem;
+  }
+}
+// section 4 start
+
+.cta-section {
+  background-color: #f17171; // Background color matching the image
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  height: 200px; // Adjust height as needed
+  position: relative;
+
+  .cta-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+
+    h1 {
+      font-size: 2.5rem;
+      color: #0a2d32; // Dark text color matching the image
+      flex: 1;
+      text-align: center;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 10px 20px;
+      border: 2px solid #0a2d32;
+      border-radius: 25px;
+      color: #0a2d32;
+      text-decoration: none;
+      font-size: 15px;
+      transition: background-color 0.3s, color 0.3s;
+      flex: 0;
+
+      &:hover {
+        background-color: #0a2d32;
+        color: #fff;
+      }
+    }
+  }
+}
+
+// Media Queries for Responsive Design
+@media (max-width: 768px) {
+  .cta-section {
+    .cta-container {
+      flex-direction: column;
+
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+
+      .cta-button {
+        font-size: 0.875rem;
+        padding: 10px 30px;
+      }
+    }
+  }
+}
+
+// Additional styles for background shapes
+.cta-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  //   background: url("../images/finish-image/fnsh-disk.svg") no-repeat center center;
+  background-size: contain;
+}
+
+.cta-section::after {
+  content: "";
+  position: absolute;
+  bottom: -65px;
+  left: 0;
+  width: 100px;
+  height: 200px;
+  background: url("../images/finish-image/fnsh-disk.svg") no-repeat center
+    center;
+  background-size: contain;
+}
+
+// footer
+
+footer {
+  background-color: #0a2b2f;
+  color: #e1e1e1;
+  padding: 20px 0;
+  text-align: center;
+
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+    div {
+      margin: 10px;
+    }
+
+    .logo {
+      p {
+        font-size: 24px;
+        font-weight: bold;
+        margin: 0;
+      }
+    }
+
+    .links {
+      a {
+        margin: 0 10px;
+        color: #e1e1e1;
+        text-decoration: none;
+        font-size: 18px;
+      }
+    }
+
+    .social-media {
+      a {
+        img {
+          width: 24px;
+          height: 24px;
+          margin: 0 5px;
+        }
+      }
+    }
+
+    .contact {
+      p {
+        margin: 0;
+        line-height: 1.6;
+
+        br {
+          display: none;
+        }
+      }
+    }
+
+    .copyright {
+      font-size: 14px;
+      margin-top: 10px;
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .contact p br {
+    display: block;
+  }
+}
+
+// done
+
+$primary-color: #003542;
+$secondary-color: #f27157;
+$text-color: #ffffff;
+$background-color: #004d61;
+$font-family: "Livvic", sans-serif;
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  margin: 0;
+  font-family: $font-family;
+  background-color: $primary-color;
+  color: $text-color;
+}
+
+.directors-section {
+  padding: 20px;
+  text-align: center;
+  margin: 0 auto;
+  @include flex-center;
+  flex-direction: column;
+
+  .directors-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+
+  .directors-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+
+    .three__card-in-one {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .director-card,
+    .director-quote-card {
+      background-color: $background-color;
+      border-radius: 10px;
+      padding: 15px;
+      width: 100%;
+      max-width: 200px;
+      text-align: center;
+
+      .director-image {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 10px;
+      }
+
+      .director-name {
+        font-size: 1.2em;
+        margin: 10px 0;
+      }
+
+      .director-role {
+        font-size: 1em;
+        margin: 10px 0;
+      }
+
+      .director-button {
+        background-color: $secondary-color;
+        border: none;
+        color: $text-color;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        font-size: 1.2em;
+        cursor: pointer;
+      }
+
+      .director-quote {
+        font-size: 1em;
+        margin: 15px 0;
+      }
+
+      .director-social {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+
+        .social-link {
+          color: $text-color;
+          text-decoration: none;
+          font-size: 1.2em;
+
+          &:hover {
+            color: $secondary-color;
+          }
+        }
+      }
+
+      .quote-close-button {
+        background-color: $secondary-color;
+        border: none;
+        color: $text-color;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        font-size: 1.2em;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+.header-nav {
+  display: flex;
+
+  .header-brend {
+    @include flex-center;
+    justify-content: space-between;
+
+    p {
+      font-family: Livvic, $font-family;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 28px;
+      text-align: left;
+      width: 730px;
+      height: 112px;
+      margin: 0;
+      gap: 0;
+      opacity: 0;
+    }
+  }
+}
+// done
+
+// next page start
+.clients-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .clients-logos{
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+// done
+@import "contact"
